@@ -4,12 +4,43 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Animation hover</title>
         <style> 
-        
+    
+            body{ 
+                background-color: #2D2D2D;
+            }
+               input{ 
+                   background-color: #1D1D1D;
+                   border: none;
+               }
+               
+                input~span::after{ 
+                content: "";
+                width: 0px;
+                height: 1px;
+                display: block;
+                transition: all 1.5s linear;
+               
+                background-color: #08fcd7;
+                }
+                
+                input:focus~ span::after{ 
+                    width: 170px;
+                }
+               
+              
+
         </style>
     </head>
     <body>
-            <div></div>
+        <form> 
+                <input style="outline: none;" type="text"  name="fname " placeholder="Name">
+                <span></span>
+                
+
+
+        </form>
+        
     </body>
     </html>
